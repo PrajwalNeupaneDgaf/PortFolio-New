@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { motion } from 'framer-motion';
-import Typical from 'react-typical';
+import { Typewriter } from 'react-simple-typewriter';
 import {
   FaReact,
   FaNodeJs,
@@ -10,7 +10,13 @@ import {
   FaGithub,
   FaJsSquare,
 } from 'react-icons/fa';
-import { SiTailwindcss, SiMongodb, SiNextdotjs, SiExpress, SiNestjs } from 'react-icons/si';
+import {
+  SiTailwindcss,
+  SiMongodb,
+  SiNextdotjs,
+  SiExpress,
+  SiNestjs,
+} from 'react-icons/si';
 
 const techIcons = [
   { icon: <FaReact className="text-cyan-400" />, name: 'React' },
@@ -20,12 +26,15 @@ const techIcons = [
   { icon: <SiNestjs className="text-red-600" />, name: 'NestJS' },
   { icon: <SiMongodb className="text-green-400" />, name: 'MongoDB' },
   { icon: <SiTailwindcss className="text-sky-400" />, name: 'Tailwind' },
-  { icon: <FaGithub className="text-white" />, name: 'GitHub' }
+  { icon: <FaGithub className="text-white" />, name: 'GitHub' },
 ];
 
 const HeroSection = () => {
   return (
-    <div id="home" className="bg-black text-white min-h-screen flex items-center justify-center px-6">
+    <div
+      id="home"
+      className="bg-black text-white min-h-screen flex items-center justify-center px-6"
+    >
       <div className="max-w-5xl w-full grid md:grid-cols-2 gap-10 items-center">
         {/* Text Section */}
         <motion.div
@@ -37,20 +46,22 @@ const HeroSection = () => {
             Hi, I'm <span className="text-blue-500">Prajwal Neupane</span>
           </h1>
           <h2 className="mt-3 text-xl md:text-2xl text-gray-300">
-            <Typical
-              steps={[
-                'Full Stack Web Developer ',
-                2000,
-                'MERN Stack Enthusiast ',
-                2000,
-                'API Developer With NEST ',
-                2000,
-                'UI/UX Focused ',
-                2000,
-              ]}
-              loop={Infinity}
-              wrapper="span"
-            />
+            <span className="text-blue-300">
+              <Typewriter
+                words={[
+                  'Full Stack Web Developer',
+                  'MERN Stack Enthusiast',
+                  'API Developer With NEST',
+                  'UI/UX Focused',
+                ]}
+                loop={true}
+                cursor
+                cursorStyle="|"
+                typeSpeed={70}
+                deleteSpeed={50}
+                delaySpeed={1200}
+              />
+            </span>
           </h2>
           <p className="mt-4 text-gray-400 text-sm md:text-base">
             I build scalable web apps with clean code, great UI, and robust backend logic. From REST APIs to animations, I do it all.
