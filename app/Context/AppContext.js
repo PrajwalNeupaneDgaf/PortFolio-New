@@ -1,6 +1,6 @@
 'use client'
 import React, { createContext, useContext, useEffect, useState } from 'react'
-import LoadingComponent from "./"
+import LoadingComponent from "../Components/LoadingComponent";
 const newContext = createContext()
 
 const AppContext = ({ children }) => {
