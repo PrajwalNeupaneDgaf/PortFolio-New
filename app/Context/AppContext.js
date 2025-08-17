@@ -1,6 +1,6 @@
 'use client'
 import React, { createContext, useContext, useEffect, useState } from 'react'
-
+import LoadingComponent from "./"
 const newContext = createContext()
 
 const AppContext = ({ children }) => {
@@ -44,7 +44,7 @@ const AppContext = ({ children }) => {
     }
   }
 
-  if (Loading) return
+  if (Loading) return <LoadingComponent/>
   return (
     <newContext.Provider value={{ IsAuthorized, setIsAuthorized, IsVerified, setIsVerified,Projects }}>
       {children}
